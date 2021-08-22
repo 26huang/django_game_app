@@ -25,7 +25,7 @@ SECRET_KEY = 'v$fx9128*y&z0f#q4!c!lg^cz+11dcl(ox=3huz35)88lx8oy='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -42,6 +42,7 @@ DEFAULT_APPS = [
 CUSTOM_APPS = [
     'apps.main',
     'apps.gameplay',
+    'apps.player',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + CUSTOM_APPS

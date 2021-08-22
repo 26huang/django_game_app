@@ -27,3 +27,7 @@ g.move_set
 g.move_set.all()
 g.move_set.count()
 g.move_set.exclude(comment='')
+
+# delete a record
+g = Game.objects.get(pk=1)
+g.delete()
