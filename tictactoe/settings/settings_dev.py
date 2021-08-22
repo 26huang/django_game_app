@@ -41,6 +41,7 @@ DEFAULT_APPS = [
 
 CUSTOM_APPS = [
     'apps.main',
+    'apps.gameplay',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + CUSTOM_APPS
