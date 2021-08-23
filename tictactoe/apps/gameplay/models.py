@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models import Q # allows logical operators
+from django.db.models import Q # enables logical operators
 
 GAME_STATUS_CHOICES = (
     ('F', 'First player to move'),
@@ -23,6 +23,10 @@ class GamesQuerySet(models.QuerySet):
         return self.filter(
             Q(status='F') | Q(status='S')
         )
+
+    def draw(self):
+        # list all games that ended in draw
+        return self.filter(Q(status='D'))
 
 
 class Game(models.Model):

@@ -6,13 +6,16 @@
 </head>
 <body>
     <h1>Welcome to TikTacToe, {{ user.username }}!</h1>
-    <p>There are currently {{ ngames }} number of games in records.</p>
-    <p>You are active in the following games:</p>
+    <p>Total number of games in record: {{ ngames }}</p>
+    <p>Total active games: {{ active_games }}</p>
+    <p>Total draw games: {{ draw_games }}</p>
+
+    <h2>{{ user.username }}'s Status</h2>
+    <p>You have {{ my_ngames }} games in record:</p>
     <ul>
-        {% for g in games %}
-            <li>Game {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }} </li>
+        {% for g in my_games %}
+        <li><strong>{{ g.status }}</strong> - Game ID {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }} </li>
         {% endfor %}
     </ul>
-
 </body>
 </html>
