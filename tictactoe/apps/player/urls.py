@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from django.conf.urls import url
 
-app_name = 'player'
+app_name = 'main'
 
 urlpatterns = [
     path('', views.welcome, name='welcome'),
