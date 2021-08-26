@@ -1,14 +1,7 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link href="{% static 'player/style.css' %}" rel="stylesheet">
-</head>
+{% extends "base.html" %}
+{% block content %}
 <body>
     <h1>Welcome</h1>
     Number of games: {{ ngames }}
 </body>
-</html>
+{% endblock %}
