@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<body>
+    <h1>Welcome to TikTacToe!</h1>
+    <p>Total number of games in record: {{ ngames }}</p>
+    <p>Total active games: {{ active_games }}</p>
+    <p>Total draw games: {{ draw_games }}</p>
+</body>
+{% endblock %}

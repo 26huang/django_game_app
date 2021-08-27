@@ -5,6 +5,6 @@ from django.conf.urls import url
 app_name = 'main'
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.welcome, name='welcome'),
     # url(r'^$', views.home, name='home'),
 ]

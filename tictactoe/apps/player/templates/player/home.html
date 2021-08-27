@@ -6,7 +6,13 @@ Player
 
 {% block content %}
 <body>
-    <h1>Welcome</h1>
-    Number of games: {{ ngames }}
+    <h1>Welcome, {{ user.username }}</h1>
+    <h2>Your Game Status</h2>
+    <p>You have {{ my_ngames }} games in record:</p>
+    <ul>
+        {% for g in my_games %}
+        <li><strong>{{ g.status }}</strong> - Game ID {{ g.id }}: {{ g.first_player }} vs {{ g.second_player }} </li>
+        {% endfor %}
+    </ul>
 </body>
 {% endblock %}
