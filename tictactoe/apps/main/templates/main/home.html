@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
 <body>
     <h1>Welcome to TikTacToe, {{ user.username }}!</h1>
     <p>Total number of games in record: {{ ngames }}</p>
@@ -18,4 +19,4 @@
         {% endfor %}
     </ul>
 </body>
-</html>
+{% endblock %}
