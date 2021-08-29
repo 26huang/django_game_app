@@ -130,4 +130,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-LOGIN_REDIRECT_URL='player:home'
+LOGIN_REDIRECT_URL = 'player:home'
+# LOGIN_REDIRECT_URL = 'tictactoe:admin'
+LOGOUT_REDIRECT_URL = 'main:welcome'
+LOGIN_URL = "main:welcome"
